@@ -13,13 +13,21 @@ public class health : MonoBehaviour
             _health++;
         }
 
-        if (collision.gameObject.tag == "boundary")
+        if (collision.gameObject.tag == "SmallRock")
         {
             _health--;
         }
 
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "LargeRock")
         {
+            _health--;
+            _health--;
+        }
+
+        if (collision.gameObject.tag == "Mine")
+        {
+            _health--;
+            _health--;
             _health--;
         }
     }
