@@ -12,7 +12,7 @@ public class player_Pick_Up : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "bugs")
+        if (other.gameObject.tag == "BugRelic")
         {
             bugs++;
             Debug.Log("pick up bugs");
