@@ -13,6 +13,7 @@ public class TextureScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerControllerRef = FindAnyObjectByType<PlayerController>();
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
