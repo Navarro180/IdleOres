@@ -207,12 +207,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4992915563430929841}
-  - component: {fileID: 7056738479331109253}
   - component: {fileID: 4805415636319470790}
   - component: {fileID: 5548137972763999567}
+  - component: {fileID: 5075050128736444478}
   m_Layer: 0
   m_Name: BugRelic
-  m_TagString: Untagged
+  m_TagString: BugRelic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,27 +234,6 @@ Transform:
   - {fileID: 3100335638712334031}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7056738479331109253
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4992915563430929840}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.295745, y: 10.674651, z: 103.24955}
-  m_Center: {x: -0.076062486, y: 0.8627202, z: -43.280502}
 --- !u!95 &4805415636319470790
 Animator:
   serializedVersion: 5
@@ -290,6 +269,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControllerRef: {fileID: 0}
   entitySpeedMod: 2.4
+--- !u!135 &5075050128736444478
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4992915563430929840}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 6.317925
+  m_Center: {x: 0, y: 0, z: -5.8179193}
 --- !u!1 &5945209039351324339
 GameObject:
   m_ObjectHideFlags: 0

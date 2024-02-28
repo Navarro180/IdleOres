@@ -24,6 +24,6 @@ public class RelicSpawnManager : MonoBehaviour
         float randomY = Random.Range(-19f, -5f);
 
         // Instantiate the prefab at the random position
-        Instantiate(randomPrefab, new Vector3(0, randomY, 25), randomPrefab.transform.rotation);
+        Instantiate(randomPrefab, new Vector3(0, randomY, 15), randomPrefab.transform.rotation);
     }
 }

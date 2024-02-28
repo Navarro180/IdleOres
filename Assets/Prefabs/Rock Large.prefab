@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.25881898
+      value: 0.047433086
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
@@ -51,12 +51,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.96592593
+      value: -0.9988744
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -210
+      value: -174.563
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5788922ebac046845b918835751559bf,
         type: 3}
@@ -77,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5788922ebac046845b918835751559bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: LargeRock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89,7 +94,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5788922ebac046845b918835751559bf,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5004051329770968018}
+      addedObject: {fileID: 238129513643141178}
   m_SourcePrefab: {fileID: 100100000, guid: 5788922ebac046845b918835751559bf, type: 3}
 --- !u!1 &2326603979183087799 stripped
 GameObject:
@@ -111,8 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControllerRef: {fileID: 0}
   entitySpeedMod: 1.5
---- !u!65 &5004051329770968018
-BoxCollider:
+--- !u!135 &238129513643141178
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,5 +135,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.028696356, y: 0.023463685, z: 0.17219855}
-  m_Center: {x: -0.000120362376, y: -0.0009181566, z: 0.07548444}
+  m_Radius: 0.015019683
+  m_Center: {x: -0.00012080096, y: -0.0009181566, z: 0.0007678116}

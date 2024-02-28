@@ -8,6 +8,4 @@ public class DespawnZone : MonoBehaviour
     {
         Destroy(other.gameObject);
     }
-
-
 }
