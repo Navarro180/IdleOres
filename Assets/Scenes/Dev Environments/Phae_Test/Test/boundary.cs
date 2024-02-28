@@ -6,6 +6,7 @@ public class boundary : MonoBehaviour
 {
     public GameObject player;
     public GameObject bound;
+    public GameObject bound2;
     bool playerDrillUpdate_01;
 
     public void Start()
@@ -27,6 +28,6 @@ public class boundary : MonoBehaviour
 
     public void outofBounds()
     {
-        bound.SetActive(false);
+        Destroy(this);
     }
 }
