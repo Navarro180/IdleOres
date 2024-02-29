@@ -75,7 +75,7 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "3d41a885-7067-4a42-8da6-77155f37092f",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -84,7 +84,7 @@
                 },
                 {
                     "name": "Boost",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "31391a3e-47e1-488d-937a-7e6b4ed49726",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -96,7 +96,7 @@
                 {
                     "name": "",
                     "id": "d7d72f41-4cda-42ae-b3a0-45faab50bf50",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -105,9 +105,75 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "WASD",
+                    "id": "a88f543e-e719-4295-9537-1029b771fb01",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "84ecd3b5-f488-450d-ac11-0c56bdf4d488",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "130b0ab6-dc60-4c92-9eab-9f1e5e151b00",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "26dd5f11-397f-4c34-9bb9-6b51d1f7adda",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "8e140fc0-2fe1-489f-b878-7f6c10c11d1b",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
-                    "id": "22cb7c9c-086d-4bed-9d5d-ba83e9bff34b",
+                    "id": "183c0f2c-812d-42e9-8571-b546e60cb5db",
                     "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84d232d3-51bc-4940-a0a4-53b99d89d323",
+                    "path": "<Mouse>/scroll",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
