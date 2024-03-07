@@ -8,6 +8,14 @@ TagManager:
   - Mine
   - SmallRock
   - LargeRock
+  - enemy
+  - boost_Drill
+  - Health Pack
+  - boundary
+  - tile
+  - coal
+  - oil_Spill
+  - $
   layers:
   - Default
   - TransparentFX
