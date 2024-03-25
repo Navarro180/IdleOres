@@ -6,6 +6,14 @@ public class DespawnZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if (other.tag == "MoveSimMaster")
+        {
+            other.transform.position = new Vector3(0, 0, 15);
+        }
+        else
+        {
+            Destroy(other.gameObject);
+        }
+        return;
     }
 }

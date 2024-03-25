@@ -16,6 +16,8 @@ TagManager:
   - coal
   - oil_Spill
   - $
+  - DespawnZone
+  - MoveSimMaster
   layers:
   - Default
   - TransparentFX

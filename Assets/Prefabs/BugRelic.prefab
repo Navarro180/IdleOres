@@ -208,7 +208,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4992915563430929841}
   - component: {fileID: 4805415636319470790}
-  - component: {fileID: 5548137972763999567}
   - component: {fileID: 5075050128736444478}
   m_Layer: 0
   m_Name: BugRelic
@@ -255,20 +254,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5548137972763999567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4992915563430929840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd8e966b81d5cc4a8626c17d07d13e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerControllerRef: {fileID: 0}
-  entitySpeedMod: 2.4
 --- !u!135 &5075050128736444478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -288,8 +273,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 6.317925
-  m_Center: {x: 0, y: 0, z: -5.8179193}
+  m_Radius: 7.556981
+  m_Center: {x: 0, y: 0, z: -7.0569744}
 --- !u!1 &5945209039351324339
 GameObject:
   m_ObjectHideFlags: 0

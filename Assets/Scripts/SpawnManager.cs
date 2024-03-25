@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public Transform moveParent;
+
     public GameObject[] prefabs;
 
     public float minSpawnTime = 0.0000000001f;
@@ -15,15 +17,21 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnPrefab", 0f, 0.5f);
     }
 
+    private void FixedUpdate()
+    {
+        moveParent = FindAnyObjectByType<MoveSimMaster>().transform;
+    }
+
     void SpawnPrefab()
     {
         // Choose a random prefab from the array
-        GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length)];
+        GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length - 1)];
 
         // Generate a random Y position within a specified range
         float randomY = Random.Range(-19f, 0f);
 
         // Instantiate the prefab at the random position
-        Instantiate(randomPrefab, new Vector3(0, randomY, 15), randomPrefab.transform.rotation);
+        Instantiate(randomPrefab, new Vector3(10, randomY, 15), randomPrefab.transform.rotation, moveParent);
+        
     }
 }

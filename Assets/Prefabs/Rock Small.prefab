@@ -90,10 +90,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ace628b19ffbe28498c40dfc5a87886e,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2048888544400678542}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ace628b19ffbe28498c40dfc5a87886e,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5842913017312194838}
   m_SourcePrefab: {fileID: 100100000, guid: ace628b19ffbe28498c40dfc5a87886e, type: 3}
 --- !u!1 &1459153755966407192 stripped
@@ -102,20 +98,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1801049858606579529}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2048888544400678542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459153755966407192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd8e966b81d5cc4a8626c17d07d13e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerControllerRef: {fileID: 0}
-  entitySpeedMod: 1.5
 --- !u!135 &5842913017312194838
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -135,5 +117,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.00711042
-  m_Center: {x: 0.00012214742, y: 0.00066528714, z: 0.0015845692}
+  m_Radius: 0.0054814303
+  m_Center: {x: 0.00012214742, y: 0.0009652871, z: -0.000044421547}
