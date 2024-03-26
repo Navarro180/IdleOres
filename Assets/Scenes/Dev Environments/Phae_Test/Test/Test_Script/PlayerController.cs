@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Inputs")]
-    //public float inputVertical = 0f;
-    //public float inputHorizontal = 0f;
     public float moveInput;
+    public GameObject shopRef;
 
     [Header("Vertical Data")]
     public float currentAngle = 0f;
@@ -33,39 +31,12 @@ public class PlayerController : MonoBehaviour
         UpdatePosition();
         UpdateRotation();
         AngleLimitSnap();
-        //moveInput > 0 || moveInput < 0
-        //moveInput == 0
-        //if (moveInput > 0 || moveInput < 0)
-        //{
-        //    UpdatePosition();
-        //    UpdateRotation();
-        //    AngleLimitSnap();
-        //}
-        //else
-        //{
-        //    UpdateSpeed();
-        //}
     }
     private void Boost()
     {
         moveInput = UserInput.instance.MoveInput.x;
         UpdateSpeed();
-        //if (moveInput == 0)
-        //{
-        //    UpdatePosition();
-        //    UpdateRotation();
-        //    AngleLimitSnap();
-        //}
-        //else
-        //{
-        //    UpdateSpeed();
-        //}
     }
-    //public void UpdateInput()
-    //{
-    //    inputVertical = Input.GetAxis("Vertical");
-    //    inputHorizontal = Input.GetAxis("Horizontal");
-    //}
 
     public void UpdateSpeed()
     {

@@ -8,10 +8,6 @@ public class DespawnZone : MonoBehaviour
     {
         if (other.tag == "MoveSimMaster")
         {
-            other.transform.position = new Vector3(0, 0, 15);
-        }
-        else
-        {
             Destroy(other.gameObject);
         }
         return;

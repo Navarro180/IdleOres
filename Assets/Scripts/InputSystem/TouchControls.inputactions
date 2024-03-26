@@ -6,17 +6,8 @@
             "id": "01315813-7e64-4821-95c7-ab682a95121c",
             "actions": [
                 {
-                    "name": "Touch",
-                    "type": "PassThrough",
-                    "id": "2b8da599-41f0-461e-8711-a2d117da7ba2",
-                    "expectedControlType": "Touch",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "TouchPress",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "694729d8-1a2e-4f2e-b8e9-1b659525ec39",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -25,31 +16,20 @@
                 },
                 {
                     "name": "TouchPosition",
-                    "type": "PassThrough",
-                    "id": "c1f2c192-8841-40e4-93a6-9ba6e55d9539",
+                    "type": "Value",
+                    "id": "0ca6e277-15c5-448f-9bb3-a53bc7a34f93",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "4f9686f4-7ce9-4a3b-97fe-e233e27f7a99",
-                    "path": "<Touchscreen>/primaryTouch",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Touch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "66c9cfe5-7a48-43b7-9a70-7623ffcd60db",
-                    "path": "<Touchscreen>/primaryTouch/press",
-                    "interactions": "Press(behavior=2)",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "TouchPress",
@@ -58,8 +38,8 @@
                 },
                 {
                     "name": "",
-                    "id": "03464c81-9067-4ac5-98cd-384f54f473ef",
-                    "path": "<Touchscreen>/position",
+                    "id": "5cb50cbd-87da-4501-b72b-380ab370803e",
+                    "path": "<Touchscreen>/primaryTouch/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -178,6 +158,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "Boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "2ededa69-391e-4325-a9e6-331a9d2ddb64",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "PassThrough",
+                    "id": "2f89ce6c-4443-4229-84c0-31a3d640b713",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d9bbd9ec-b47b-4b09-8661-ba506468ff91",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

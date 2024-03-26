@@ -18,6 +18,7 @@ TagManager:
   - $
   - DespawnZone
   - MoveSimMaster
+  - MoveSimSpawnTrigger
   layers:
   - Default
   - TransparentFX

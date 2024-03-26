@@ -8,31 +8,31 @@ public class Start : MonoBehaviour
     public GameObject startPanel;
     public GameObject optionPanel;
 
-    private InputManager inputManager;
+    //private InputManager inputManager;
 
-    private void Awake()
-    {
-        inputManager = InputManager.Instance;
-    }
+    //private void Awake()
+    //{
+    //    inputManager = InputManager.Instance;
+    //}
 
-    private void OnEnable()
-    {
-        inputManager.OnStartTouch += OpenStartPanel;
-    }
+    //private void OnEnable()
+    //{
+    //    inputManager.OnStartTouch += OpenStartPanel;
+    //}
 
-    private void OnDisable()
-    {
-        inputManager.OnEndTouch -= OpenStartPanel;
-    }
-    public void OpenStartPanel(UnityEngine.Vector2 sceenPos, float time)
-    {
-        startPanel.SetActive(true);
-    }
+    //private void OnDisable()
+    //{
+    //    inputManager.OnEndTouch -= OpenStartPanel;
+    //}
+    //public void OpenStartPanel(Vector2 sceenPos, float time)
+    //{
+    //    startPanel.SetActive(true);
+    //}
 
-    public void CloseStartPanel()
-    {
-        startPanel.SetActive(false);
-    }
+    //public void CloseStartPanel()
+    //{
+    //    startPanel.SetActive(false);
+    //}
 
     public void OpenOptionPanel()
     {

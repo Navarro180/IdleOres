@@ -17,7 +17,7 @@ public class TextureScroller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         meshRenderer.material.mainTextureOffset += 
             new Vector2(playerControllerRef.currentHorizontalSpeed * 

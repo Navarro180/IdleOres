@@ -7,15 +7,17 @@ public class UserInput : MonoBehaviour
 {
     public static UserInput instance;
 
+    public static PlayerInput _playerInput;
+
     public Vector2 MoveInput { get; private set; }
     public Vector2 BoostInput { get; private set; }
-    //public bool MenuOpenCloseInput { get; private set; }
-
-    private PlayerInput _playerInput;
+    //public bool MenuPauseInput { get; private set; }
+    //public bool MenuUnpauseInput { get; private set; }
 
     private InputAction _moveAction;
     private InputAction _boostAction;
-    //private InputAction _menuOpenCloseAction;
+    //private InputAction _menuPauseAction;
+    //private InputAction _menuUnpauseAction;
 
     private void Awake()
     {
@@ -38,13 +40,15 @@ public class UserInput : MonoBehaviour
     {
         _moveAction = _playerInput.actions["Move"];
         _boostAction = _playerInput.actions["Boost"];
-        //_menuOpenCloseAction = _touch.actions["MenuOpenCloseAction"];
+        //_menuPauseAction = _playerInput.actions["Pause"];
+        //_menuUnpauseAction = _playerInput.actions["Unpause"];
     }
 
     void UpdateInputs()
     {
         MoveInput = _moveAction.ReadValue<Vector2>();
         BoostInput = _boostAction.ReadValue<Vector2>();
-        //MenuOpenCloseInput = _menuOpenCloseAction.WasPressedThisFrame();
-   }
+        //MenuPauseInput = _menuPauseAction.WasPressedThisFrame();
+        //MenuUnpauseInput = _menuUnpauseAction.WasPressedThisFrame();
+    }
 }
