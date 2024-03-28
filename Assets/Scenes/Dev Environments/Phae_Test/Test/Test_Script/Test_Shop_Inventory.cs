@@ -7,7 +7,7 @@ using TMPro;
 public class Test_Shop_Inventory : MonoBehaviour
 {
     public int Ores;
-    public int Health;
+    public int armor_Health;
 
     public Image healthBar;
 
@@ -18,17 +18,17 @@ public class Test_Shop_Inventory : MonoBehaviour
     private void Start()
     {
         Ores = PlayerPrefs.GetInt("Ores");
-        Health = PlayerPrefs.GetInt("Health");
+        armor_Health = PlayerPrefs.GetInt("Health");
 
         Ores = 2000;
         Ores_text.text = Ores.ToString();
-        Health = 100;
-        Health_text.text = Health.ToString();
+        armor_Health = 100;
+        Health_text.text = armor_Health.ToString();
     }
 
     public void Update()
     {
-        if (Health <= 0)
+        if (armor_Health <= 0)
         {
             //whatever you want to happen here
         }
@@ -41,11 +41,11 @@ public class Test_Shop_Inventory : MonoBehaviour
             Ores -= 200;
             Ores_text.text = Ores.ToString();
 
-            Health += 1;
-            Health_text.text = Health.ToString();
+            armor_Health += 1;
+            Health_text.text = armor_Health.ToString();
 
             PlayerPrefs.SetInt("Ores", Ores);
-            PlayerPrefs.SetInt("Health", Health);
+            PlayerPrefs.SetInt("Health", armor_Health);
         }
         else
         {
@@ -69,8 +69,8 @@ public class Test_Shop_Inventory : MonoBehaviour
     public void TakeDamage(int damage)
     {
 
-        Health -= damage;
-        healthBar.fillAmount = Health / 100;
+        armor_Health -= damage;
+        healthBar.fillAmount = armor_Health / 100;
 
     }
 
