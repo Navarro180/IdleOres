@@ -19,14 +19,14 @@ public class PlayerController : MonoBehaviour
     public float minHorizontalSpeed = 0.5f;
     public float maxHorizontalSpeed = 3.0f;
 
-    private void Update()
-    {
-        UpdateInput();
-        UpdateSpeed();
-        UpdatePosition();
-        UpdateRotation();
-        AngleLimitSnap();
-    }
+    //private void Update()
+    //{
+    //    //UpdateInput();
+    //    //UpdateSpeed();
+    //    //UpdatePosition();
+    //    //UpdateRotation();
+    //    //AngleLimitSnap();
+    //}
 
     public void UpdateInput()
     {
