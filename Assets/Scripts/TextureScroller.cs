@@ -5,7 +5,6 @@ using UnityEngine;
 public class TextureScroller : MonoBehaviour
 {
     public float scrollSpeedX = 0;
-    private float scrollSpeedY = 0;
     private MeshRenderer meshRenderer;
 
     public PlayerController playerControllerRef;
@@ -20,7 +19,7 @@ public class TextureScroller : MonoBehaviour
     void Update()
     {
         meshRenderer.material.mainTextureOffset += 
-            new Vector2(playerControllerRef.currentHorizontalSpeed * 
-            Time.deltaTime, Time.realtimeSinceStartup * scrollSpeedY);
+            new Vector2(playerControllerRef.currentHorizontalSpeed * scrollSpeedX *
+            Time.deltaTime, 0);
     }
 }

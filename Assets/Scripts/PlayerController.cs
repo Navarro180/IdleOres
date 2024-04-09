@@ -8,16 +8,19 @@ public class PlayerController : MonoBehaviour
     public float moveInput;
     public GameObject shopRef;
 
+    [Header("==== UPGRADE MODULES ====")]
+    public float upgradeMaxVerticalSpeed = 1.5f;
+    public float upgradeAcceleration = 1.0f;
+    public float upgradeMaxHorizontalSpeed = 3.0f;
+
+
     [Header("Vertical Data")]
     public float currentAngle = 0f;
-    public float maxVerticalSpeed = 1.5f;
     public float topBarrier = 10.0f;
 
     [Header("Horizontal Data")]
     public float currentHorizontalSpeed = 0.7f;
-    public float speedMod = 1.0f;
     public float minHorizontalSpeed = 0.5f;
-    public float maxHorizontalSpeed = 3.0f;
 
     private void Update()
     {
@@ -42,8 +45,8 @@ public class PlayerController : MonoBehaviour
     {
         if (moveInput != 0)
         {
-            currentHorizontalSpeed += moveInput * speedMod * Time.deltaTime;
-            currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, minHorizontalSpeed, maxHorizontalSpeed);
+            currentHorizontalSpeed += moveInput * upgradeAcceleration * Time.deltaTime;
+            currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, minHorizontalSpeed, upgradeMaxHorizontalSpeed);
         }
         return;
     }
@@ -51,7 +54,7 @@ public class PlayerController : MonoBehaviour
     public void UpdatePosition()
     {
         Vector3 currentPosition = transform.position;
-        currentPosition.y += maxVerticalSpeed * moveInput * Time.deltaTime;
+        currentPosition.y += upgradeMaxVerticalSpeed * moveInput * Time.deltaTime;
         currentPosition.y = Mathf.Min(topBarrier, currentPosition.y);
         transform.position = currentPosition;
     }
