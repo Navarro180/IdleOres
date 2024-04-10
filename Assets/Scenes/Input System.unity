@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 1437011752}
   - component: {fileID: 1437011754}
   - component: {fileID: 1437011753}
-  - component: {fileID: 1437011751}
+  - component: {fileID: 1437011756}
   - component: {fileID: 1437011755}
   m_Layer: 0
   m_Name: Player
@@ -933,19 +933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 5
---- !u!114 &1437011751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437011744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e70643e3fd215f49b0fe15917ae567d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 500
 --- !u!50 &1437011752
 Rigidbody2D:
   serializedVersion: 4
@@ -1052,6 +1039,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &1437011756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437011744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79cc8a389f8b9944aafee584b8894db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
 --- !u!1 &1539163441
 GameObject:
   m_ObjectHideFlags: 0
