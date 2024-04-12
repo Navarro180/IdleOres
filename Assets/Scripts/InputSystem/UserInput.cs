@@ -10,7 +10,7 @@ public class UserInput : MonoBehaviour
     public static PlayerInput _playerInput;
 
     public Vector2 MoveInput { get; private set; }
-    public Vector2 BoostInput { get; private set; }
+    public bool BoostInput { get; private set; }
     //public bool MenuPauseInput { get; private set; }
     //public bool MenuUnpauseInput { get; private set; }
 
@@ -47,7 +47,7 @@ public class UserInput : MonoBehaviour
     void UpdateInputs()
     {
         MoveInput = _moveAction.ReadValue<Vector2>();
-        BoostInput = _boostAction.ReadValue<Vector2>();
+        BoostInput = _boostAction.WasPressedThisFrame();
         //MenuPauseInput = _menuPauseAction.WasPressedThisFrame();
         //MenuUnpauseInput = _menuUnpauseAction.WasPressedThisFrame();
     }

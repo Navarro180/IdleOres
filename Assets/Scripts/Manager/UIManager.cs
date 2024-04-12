@@ -10,10 +10,12 @@ public class UIManager : MonoBehaviour
     public GameObject _shopPanel;
     public GameObject _sellPanel;
     public GameObject _pausePanel;
+    public GameObject _infoPanel;
 
 #region ChangeScene
     public void ReturnMainMenu(int sceneID)
     {
+        _pausePanel.SetActive(false);
         SceneManager.LoadScene(sceneID);
     }
 #endregion
@@ -34,18 +36,21 @@ public class UIManager : MonoBehaviour
     public void OpenOptionPanel()
     {
         _optionPanel.SetActive(true);
+        _pausePanel.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void CloseOptionPanel()
     {
         _optionPanel.SetActive(false);
-        Time.timeScale = 1;
+        _pausePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void OpenShopPanel()
     {
         _shopPanel.SetActive(true);
+        _sellPanel.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -58,6 +63,7 @@ public class UIManager : MonoBehaviour
     public void OpenSellPanel()
     {
         _sellPanel.SetActive(true);
+        _shopPanel.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -65,6 +71,20 @@ public class UIManager : MonoBehaviour
     {
         _sellPanel.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void OpenInfoPanel()
+    {
+        _infoPanel.SetActive(true);
+        _pausePanel.SetActive(false);
+        Time.timeScale = 0;
+    }
+
+    public void CloseInfoPanel()
+    {
+        _infoPanel.SetActive(false);
+        _pausePanel.SetActive(true);
+        Time.timeScale = 0;
     }
     #endregion
 }

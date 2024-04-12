@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
             Dmg(1);
         }
     }
-
+    #region Damage
     public void Dmg(float dmgAmount)
     {
         //damage
@@ -40,10 +40,12 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
-
+    #endregion
+    #region Death?
     private void Die()
     {
         //might change
         Destroy(gameObject);
     }
+    #endregion
 }

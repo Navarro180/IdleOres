@@ -66,7 +66,7 @@
                     "name": "Boost",
                     "type": "PassThrough",
                     "id": "31391a3e-47e1-488d-937a-7e6b4ed49726",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -76,7 +76,7 @@
                 {
                     "name": "",
                     "id": "d7d72f41-4cda-42ae-b3a0-45faab50bf50",
-                    "path": "<Gamepad>/dpad",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -142,8 +142,8 @@
                 {
                     "name": "",
                     "id": "183c0f2c-812d-42e9-8571-b546e60cb5db",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Boost",
@@ -158,34 +158,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Boost",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Menu",
-            "id": "2ededa69-391e-4325-a9e6-331a9d2ddb64",
-            "actions": [
-                {
-                    "name": "Pause",
-                    "type": "PassThrough",
-                    "id": "2f89ce6c-4443-4229-84c0-31a3d640b713",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "d9bbd9ec-b47b-4b09-8661-ba506468ff91",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
