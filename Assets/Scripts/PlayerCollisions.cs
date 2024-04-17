@@ -5,13 +5,11 @@ using TMPro;
 
 public class PlayerCollisions : MonoBehaviour
 {
-    public TextMeshProUGUI relicCounter;
-    public int relicCount;
+    public PlayerController playerRef;
 
     private void Start()
     {
-        relicCount = 0;
-        relicCounter.text = "Relics: " + relicCount;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,34 +17,23 @@ public class PlayerCollisions : MonoBehaviour
         if (other.tag == "Mine")
         {
             Destroy(other.gameObject);
-            DevRelicCountSubtract();
+
         }
         else if (other.tag == "BugRelic")
         {
             Destroy(other.gameObject);
-            relicCount++;
-            relicCounter.text = "Relics: " + relicCount;
+            playerRef.currentOreValue += 25;
         }
         else if (other.tag == "SmallRock")
         {
             Destroy(other.gameObject);
-            DevRelicCountSubtract();
+            playerRef.currentOreValue += 2;
         }
         else if (other.tag == "LargeRock")
         {
             Destroy(other.gameObject);
-            DevRelicCountSubtract();
+            playerRef.currentOreValue += 4;
         }
         return;
-    }
-
-    public void DevRelicCountSubtract()
-    {
-        relicCount--;
-        if (relicCount < 0)
-        {
-            relicCount = 0;
-        }
-        relicCounter.text = "Relics: " + relicCount;
     }
 }

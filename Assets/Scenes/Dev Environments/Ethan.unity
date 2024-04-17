@@ -3760,7 +3760,7 @@ GameObject:
   - component: {fileID: 546564880}
   - component: {fileID: 546564882}
   m_Layer: 0
-  m_Name: Player Drill
+  m_Name: ==  PLAYER DRILL  ==
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3818,6 +3818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveInput: 0
   shopRef: {fileID: 0}
+  moneyText: {fileID: 7080655893496458472}
+  oreText: {fileID: 5152120932521574841}
   upgradeMaxVerticalSpeed: 2
   upgradeAcceleration: 0.5
   upgradeMaxHorizontalSpeed: 6
@@ -3867,8 +3869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0089ccc7b3d794daa7b59bb292a162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relicCounter: {fileID: 466280670}
-  relicCount: 0
+  playerRef: {fileID: 546564880}
 --- !u!1 &549642096
 GameObject:
   m_ObjectHideFlags: 0
@@ -9437,8 +9438,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eab1f97191309114e8200b5be3c73081, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.223
-  m_Pitch: 1
+  m_Volume: 0.242
+  m_Pitch: 1.12
   Loop: 1
   Mute: 0
   Spatialize: 0
