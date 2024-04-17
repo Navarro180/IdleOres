@@ -14,10 +14,14 @@ public class PlayerController : MonoBehaviour
     public float upgradeAcceleration = 1.0f;
     public float upgradeMaxHorizontalSpeed = 3.0f;
 
+    [Header("==== SCORE VALUES ====")]
+    public float currentOreValue;
+    public float currentMoney;
 
     [Header("Vertical Data")]
     public float currentAngle = 0f;
     public float topBarrier = 10.0f;
+    public float bottomBarrier = -30;
 
     [Header("Horizontal Data")]
     public float currentHorizontalSpeed = 0.7f;
@@ -57,6 +61,12 @@ public class PlayerController : MonoBehaviour
         Vector3 currentPosition = transform.position;
         currentPosition.y += upgradeMaxVerticalSpeed * moveInput * Time.deltaTime;
         currentPosition.y = Mathf.Min(topBarrier, currentPosition.y);
+        
+        if (currentPosition.y <= bottomBarrier)
+        {
+            return;
+        }
+        
         transform.position = currentPosition;
     }
 

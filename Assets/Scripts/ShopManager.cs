@@ -7,6 +7,9 @@ public class ShopManager : MonoBehaviour
 {
     public GameObject shopOverlayRef;
     public GameObject sellOverlayRef;
+    public GameObject optionOverlayRef;
+    public GameObject settingMenuOverlayRef;
+    public GameObject infoOverlayRef;
 
     [Header("==== Current Upgrade Values ====")]
     public TextMeshProUGUI currentUpgradeValueAcceleration;
@@ -31,12 +34,6 @@ public class ShopManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void ButtonShopExit()
-    {
-        sellOverlayRef.SetActive(false);
-        shopOverlayRef.SetActive(false);
-        Time.timeScale = 1;
-    }
 
     // SELL - ENTER / EXIT
     public void ButtonSellEnter()
@@ -46,10 +43,14 @@ public class ShopManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void ButtonSellExit()
+    public void ButtonOverlayExit()
     {
         sellOverlayRef.SetActive(false);
         shopOverlayRef.SetActive(false);
+        optionOverlayRef.SetActive(false);
+        settingMenuOverlayRef.SetActive(false);
+        infoOverlayRef.SetActive(false);
+
         Time.timeScale = 1;
     }
 
