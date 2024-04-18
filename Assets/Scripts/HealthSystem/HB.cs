@@ -5,18 +5,14 @@ using UnityEngine.UI;
 
 public class HB : MonoBehaviour
 {
+    [Header("Health Meter")]
     [SerializeField]
     private float tDrain = .5f;
-
     [SerializeField]
     private Gradient _gradient;
-
     private Image hbImage;
-
     private float target = 1f;
-
     private Color newHBColor;
-
     private Coroutine drainHB;
 
     private void Start()

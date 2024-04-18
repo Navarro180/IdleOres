@@ -2,24 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour//, IDataPersistance
 {
-    [Header("Inputs")]
-    //public float inputVertical = 0f;
-    //public float inputHorizontal = 0f;
-    public float moveInput;
+    public float moveInputX;
+    public float moveInputY;
+    public GameObject shopRef;
+
+    [Header("==== UPGRADE MODULES ====")]
+    public float upgradeMaxVerticalSpeed = 1.5f;
+    public float upgradeAcceleration = 1.0f;
+    public float upgradeMaxHorizontalSpeed = 3.0f;
+
 
     [Header("Vertical Data")]
     public float currentAngle = 0f;
-    public float maxVerticalSpeed = 1.5f;
     public float topBarrier = 10.0f;
 
     [Header("Horizontal Data")]
     public float currentHorizontalSpeed = 0.7f;
-    public float speedMod = 1.0f;
     public float minHorizontalSpeed = 0.5f;
-    public float maxHorizontalSpeed = 3.0f;
 
     private void Update()
     {
@@ -27,52 +30,32 @@ public class PlayerController : MonoBehaviour
         Boost();
     }
 
+    #region BoostBarUI
+    public void SetRunSpeed(float speed)
+    {
+        currentHorizontalSpeed = speed;
+    }
+    #endregion
+
     private void Move()
     {
-        moveInput = UserInput.instance.MoveInput.y;
+        moveInputY = UserInput.instance.MoveInput.y;
         UpdatePosition();
         UpdateRotation();
         AngleLimitSnap();
-        //moveInput > 0 || moveInput < 0
-        //moveInput == 0
-        //if (moveInput > 0 || moveInput < 0)
-        //{
-        //    UpdatePosition();
-        //    UpdateRotation();
-        //    AngleLimitSnap();
-        //}
-        //else
-        //{
-        //    UpdateSpeed();
-        //}
     }
     private void Boost()
     {
-        moveInput = UserInput.instance.MoveInput.x;
+        moveInputX = UserInput.instance.MoveInput.x;
         UpdateSpeed();
-        //if (moveInput == 0)
-        //{
-        //    UpdatePosition();
-        //    UpdateRotation();
-        //    AngleLimitSnap();
-        //}
-        //else
-        //{
-        //    UpdateSpeed();
-        //}
     }
-    //public void UpdateInput()
-    //{
-    //    inputVertical = Input.GetAxis("Vertical");
-    //    inputHorizontal = Input.GetAxis("Horizontal");
-    //}
 
     public void UpdateSpeed()
     {
-        if (moveInput != 0)
+        if (moveInputX != 0)
         {
-            currentHorizontalSpeed += moveInput * speedMod * Time.deltaTime;
-            currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, minHorizontalSpeed, maxHorizontalSpeed);
+            currentHorizontalSpeed += moveInputX * upgradeAcceleration * Time.deltaTime;
+            currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, minHorizontalSpeed, upgradeMaxHorizontalSpeed);
         }
         return;
     }
@@ -80,26 +63,36 @@ public class PlayerController : MonoBehaviour
     public void UpdatePosition()
     {
         Vector3 currentPosition = transform.position;
-        currentPosition.y += maxVerticalSpeed * moveInput * Time.deltaTime;
+        currentPosition.y += upgradeMaxVerticalSpeed * moveInputY * Time.deltaTime;
         currentPosition.y = Mathf.Min(topBarrier, currentPosition.y);
         transform.position = currentPosition;
     }
 
     public void UpdateRotation()
     {
-        float targetAngle = Mathf.Lerp(-45f, 45f, ((moveInput / 2f) + 0.5f));    // ZeroToOneRange = (input / sizeOfRange) + 0.5f
+        float targetAngle = Mathf.Lerp(-45f, 45f, ((moveInputY / 2f) + 0.5f));    // ZeroToOneRange = (input / sizeOfRange) + 0.5f
         currentAngle = Mathf.Lerp(currentAngle, targetAngle, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Euler(0f, 0f, currentAngle);
     }
 
     public void AngleLimitSnap()
     {
-        if (moveInput == 0)
+        if (moveInputY == 0)
         {
             if (-0.5f < currentAngle && currentAngle < 0.5f)
             {
                 currentAngle = 0f;
             }
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        //this.transform.position = data.playerPos;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        //data.playerPos = this.transform.position;
     }
 }
