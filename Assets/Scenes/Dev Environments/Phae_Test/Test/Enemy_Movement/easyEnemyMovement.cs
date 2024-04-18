@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class easyEnemyMovement : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     public int health;
 
     public GameObject coal;
