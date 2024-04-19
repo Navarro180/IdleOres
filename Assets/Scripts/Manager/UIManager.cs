@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     }
 #endregion
 
-    #region Canvas Activations/Deactivation
+#region Canvas Activations/Deactivation
     public void OpenPausePanel()
     {
         _pausePanel.SetActive(true);

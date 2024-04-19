@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistance
 {
     public float moveInput;
     public GameObject shopRef;
@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     public float upgradeMaxHorizontalSpeed = 3.0f;
 
     [Header("==== SCORE VALUES ====")]
-    public float currentOreValue;
-    public float currentMoney;
+    public int currentOreValue = 0;
+    public int currentMoney = 0;
 
     [Header("==== Vertical Data ====")]
     public float currentAngle = 0f;
@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         UpdateSpeed();
     }
 
+    #region Movement
     public void UpdateSpeed()
     {
         if (moveInput != 0)
@@ -95,4 +96,21 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    #endregion
+
+    #region Save/Load
+    void IDataPersistance.LoadData(GameData data)
+    {
+        //throw new NotImplementedException();
+        this.currentMoney = data.moneyText;
+        this.currentOreValue = data.valueText;
+    }
+
+    void IDataPersistance.SaveData(ref GameData data)
+    {
+        //throw new NotImplementedException();
+        data.moneyText = this.currentMoney;
+        data.valueText = this.currentOreValue;
+    }
+    #endregion
 }

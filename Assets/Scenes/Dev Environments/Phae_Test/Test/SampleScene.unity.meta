@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Dev Environments/Phae_Test/Test/SampleScene.unity.meta
 guid: 9fc0d4010bbf28b4594072e72b8655ab
+========
+guid: 99c9720ab356a0642a771bea13969a05
+>>>>>>>> UI:Assets/Scenes/SampleScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
