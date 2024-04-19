@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a042308fc862d84a9f6b8270c7befaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerRef: 0
+  playerRef: {fileID: 0}
+  moveParentSpawnerRef: {fileID: 0}
   prefabs:
   - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
   - {fileID: 4992915563430929840, guid: 1388b57f4b883e34ea743439ad381f06, type: 3}
@@ -57,11 +58,11 @@ MonoBehaviour:
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
-  maxChildrenSpawned: 10
+  maxChildrenSpawned: 20
   spawnOriginX: 25
   xPosRange: 25
-  spawnYMin: 5
-  spawnYMax: -30
+  spawnYMin: 3
+  spawnYMax: -20
   zPos: 15
 --- !u!65 &7896396426029484108
 BoxCollider:
