@@ -7,11 +7,13 @@ public class GameData
 {
     //track the player actions
     public int playerHealth;
-    public Vector3 playerPos;
+    public int moneyText;
+    public int valueText;
+   
 
     //collectables
     //public Dictionary<string, bool> relicCollected;
-    public SerializableDictionary<string, bool> relicCollected;
+    //public SerializableDictionary<string, bool> relicCollected;
 
     //the value defined in this constructor will be default values
     //the game starts with when there's no data to load
@@ -19,8 +21,10 @@ public class GameData
     public GameData()
     {
         this.playerHealth = 100;
-        playerPos = Vector3.zero;
+        this.moneyText = 0;
+        this.valueText = 0;
+        
         //relicCollected = new Dictionary<string, bool>();
-        relicCollected = new SerializableDictionary<string, bool>();
+        //relicCollected = new SerializableDictionary<string, bool>();
     }
 }

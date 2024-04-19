@@ -4,23 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerController : MonoBehaviour//, IDataPersistance
+public class PlayerController : MonoBehaviour, IDataPersistance
 {
-    public float moveInputX;
-    public float moveInputY;
+    public float moveInput;
     public GameObject shopRef;
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI oreText;
 
     [Header("==== UPGRADE MODULES ====")]
     public float upgradeMaxVerticalSpeed = 1.5f;
     public float upgradeAcceleration = 1.0f;
     public float upgradeMaxHorizontalSpeed = 3.0f;
 
+    [Header("==== SCORE VALUES ====")]
+    public int currentOreValue = 0;
+    public int currentMoney = 0;
 
-    [Header("Vertical Data")]
+    [Header("==== Vertical Data ====")]
     public float currentAngle = 0f;
     public float topBarrier = 10.0f;
+    public float bottomBarrier = -30;
 
-    [Header("Horizontal Data")]
+    [Header("==== Horizontal Data ====")]
     public float currentHorizontalSpeed = 0.7f;
     public float minHorizontalSpeed = 0.5f;
 
@@ -30,31 +35,31 @@ public class PlayerController : MonoBehaviour//, IDataPersistance
         Boost();
     }
 
-    #region BoostBarUI
-    public void SetRunSpeed(float speed)
+    public void FixedUpdate()
     {
-        currentHorizontalSpeed = speed;
+        moneyText.text = currentMoney.ToString();
+        oreText.text = currentOreValue.ToString();
     }
-    #endregion
 
     private void Move()
     {
-        moveInputY = UserInput.instance.MoveInput.y;
+        moveInput = UserInput.instance.MoveInput.y;
         UpdatePosition();
         UpdateRotation();
         AngleLimitSnap();
     }
     private void Boost()
     {
-        moveInputX = UserInput.instance.MoveInput.x;
+        moveInput = UserInput.instance.MoveInput.x;
         UpdateSpeed();
     }
 
+    #region Movement
     public void UpdateSpeed()
     {
-        if (moveInputX != 0)
+        if (moveInput != 0)
         {
-            currentHorizontalSpeed += moveInputX * upgradeAcceleration * Time.deltaTime;
+            currentHorizontalSpeed += moveInput * upgradeAcceleration * Time.deltaTime;
             currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, minHorizontalSpeed, upgradeMaxHorizontalSpeed);
         }
         return;
@@ -63,21 +68,27 @@ public class PlayerController : MonoBehaviour//, IDataPersistance
     public void UpdatePosition()
     {
         Vector3 currentPosition = transform.position;
-        currentPosition.y += upgradeMaxVerticalSpeed * moveInputY * Time.deltaTime;
+        currentPosition.y += upgradeMaxVerticalSpeed * moveInput * Time.deltaTime;
         currentPosition.y = Mathf.Min(topBarrier, currentPosition.y);
+        
+        if (currentPosition.y <= bottomBarrier)
+        {
+            return;
+        }
+        
         transform.position = currentPosition;
     }
 
     public void UpdateRotation()
     {
-        float targetAngle = Mathf.Lerp(-45f, 45f, ((moveInputY / 2f) + 0.5f));    // ZeroToOneRange = (input / sizeOfRange) + 0.5f
+        float targetAngle = Mathf.Lerp(-45f, 45f, ((moveInput / 2f) + 0.5f));    // ZeroToOneRange = (input / sizeOfRange) + 0.5f
         currentAngle = Mathf.Lerp(currentAngle, targetAngle, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Euler(0f, 0f, currentAngle);
     }
 
     public void AngleLimitSnap()
     {
-        if (moveInputY == 0)
+        if (moveInput == 0)
         {
             if (-0.5f < currentAngle && currentAngle < 0.5f)
             {
@@ -85,14 +96,21 @@ public class PlayerController : MonoBehaviour//, IDataPersistance
             }
         }
     }
+    #endregion
 
-    public void LoadData(GameData data)
+    #region Save/Load
+    void IDataPersistance.LoadData(GameData data)
     {
-        //this.transform.position = data.playerPos;
+        //throw new NotImplementedException();
+        this.currentMoney = data.moneyText;
+        this.currentOreValue = data.valueText;
     }
 
-    public void SaveData(ref GameData data)
+    void IDataPersistance.SaveData(ref GameData data)
     {
-        //data.playerPos = this.transform.position;
+        //throw new NotImplementedException();
+        data.moneyText = this.currentMoney;
+        data.valueText = this.currentOreValue;
     }
+    #endregion
 }

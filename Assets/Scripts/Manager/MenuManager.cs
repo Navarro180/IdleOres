@@ -1,107 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("Panels")]
+    public GameObject _levelPanel;
     public GameObject _optionPanel;
-    public GameObject _shopPanel;
-    public GameObject _sellPanel;
-    public GameObject _pausePanel;
-    public GameObject _infoPanel;
 
-#region ChangeScene
+    #region Pause/Unpause
+
+    #endregion
+
+    #region ChangeScene
     public void ReturnMainMenu(int sceneID)
     {
-        _pausePanel.SetActive(false);
-        SceneManager.LoadScene(sceneID);
+            SceneManager.LoadScene(sceneID);
     }
-#endregion
+    #endregion
 
- #region Canvas Activations/Deactivation
-    public void OpenPausePanel()
-    {
-        _pausePanel.SetActive(true);
-        Time.timeScale = 0;
-    }
-
-    public void ClosePausePanel()
-    {
-        _pausePanel.SetActive(false);
-        Time.timeScale = 1;
-    }
-    
+    #region Canvas Activations/Deactivation
     public void OpenOptionPanel()
     {
         _optionPanel.SetActive(true);
-        _pausePanel.SetActive(false);
-        Time.timeScale = 0;
     }
 
     public void CloseOptionPanel()
     {
         _optionPanel.SetActive(false);
-        _pausePanel.SetActive(true);
-        Time.timeScale = 0;
-    }
-
-    public void OpenShopPanel()
+    } 
+    
+    public void ClosePanel()
     {
-        _shopPanel.SetActive(true);
-        _sellPanel.SetActive(false);
-        Time.timeScale = 0;
-    }
-
-    public void CloseShopPanel()
-    {
-        _shopPanel.SetActive(false);
-        Time.timeScale = 1;
-    }
-
-    public void OpenSellPanel()
-    {
-        _sellPanel.SetActive(true);
-        _shopPanel.SetActive(false);
-        Time.timeScale = 0;
-    }
-
-    public void CloseSellPanel()
-    {
-        _sellPanel.SetActive(false);
-        Time.timeScale = 1;
-    }
-
-    public void OpenInfoPanel()
-    {
-        _infoPanel.SetActive(true);
-        _pausePanel.SetActive(false);
-        Time.timeScale = 0;
-    }
-
-    public void CloseInfoPanel()
-    {
-        _infoPanel.SetActive(false);
-        _pausePanel.SetActive(true);
-        Time.timeScale = 0;
+        _levelPanel.SetActive(false);
     }
     #endregion
-
-#region New/Save/Load Game
-    public void NewGame()
+    #region Quit Function
+    public void Quit()
     {
-        DataPersistanceManager.instance.NewGame();
+        Application.Quit();
+        Debug.Log("Quitting");
     }
-
-    public void SaveGame()
-    {
-        DataPersistanceManager.instance.SaveGame();
-    }
-
-    public void LoadGame()
-    {
-        DataPersistanceManager.instance.LoadGame();
-    }
-#endregion
+    #endregion
 }

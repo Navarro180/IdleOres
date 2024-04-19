@@ -10,7 +10,7 @@ public class MoveSimMaster : MonoBehaviour
 
     // Child Spawning Variables
     public GameObject[] prefabs;
-    public int maxChildrenSpawned = 10;
+    public int maxChildrenSpawned = 3;
 
     public float spawnOriginX = 25f;
     public float xPosRange = 25f;
