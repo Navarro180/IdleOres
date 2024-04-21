@@ -12,7 +12,12 @@ public class UIManager : MonoBehaviour
     public GameObject _pausePanel;
     public GameObject _infoPanel;
 
-#region ChangeScene
+    [Header("Misc.")]
+    public GameObject _HungryBoySetup;
+    public GameObject mainRenderImage; 
+    public GameObject mainUI;
+
+    #region ChangeScene
     public void ReturnMainMenu(int sceneID)
     {
         _pausePanel.SetActive(false);
@@ -24,12 +29,16 @@ public class UIManager : MonoBehaviour
     public void OpenPausePanel()
     {
         _pausePanel.SetActive(true);
+        mainRenderImage.SetActive(false);
+        mainUI.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ClosePausePanel()
     {
         _pausePanel.SetActive(false);
+        mainRenderImage.SetActive(true);
+        mainUI.SetActive(true);
         Time.timeScale = 1;
     }
     
@@ -37,6 +46,8 @@ public class UIManager : MonoBehaviour
     {
         _optionPanel.SetActive(true);
         _pausePanel.SetActive(false);
+        mainRenderImage.SetActive(false);
+        mainUI.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -51,12 +62,16 @@ public class UIManager : MonoBehaviour
     {
         _shopPanel.SetActive(true);
         _sellPanel.SetActive(false);
-        Time.timeScale = 0;
+        mainRenderImage.SetActive(false);
+        mainUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void CloseShopPanel()
     {
         _shopPanel.SetActive(false);
+        mainRenderImage.SetActive(true);
+        mainUI.SetActive(true);
         Time.timeScale = 1;
     }
 
@@ -64,12 +79,16 @@ public class UIManager : MonoBehaviour
     {
         _sellPanel.SetActive(true);
         _shopPanel.SetActive(false);
-        Time.timeScale = 0;
+        mainRenderImage.SetActive(false);
+        mainUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void CloseSellPanel()
     {
         _sellPanel.SetActive(false);
+        mainRenderImage.SetActive(true);
+        mainUI.SetActive(true);
         Time.timeScale = 1;
     }
 
@@ -77,6 +96,8 @@ public class UIManager : MonoBehaviour
     {
         _infoPanel.SetActive(true);
         _pausePanel.SetActive(false);
+        mainRenderImage.SetActive(false);
+        mainUI.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -85,6 +106,17 @@ public class UIManager : MonoBehaviour
         _infoPanel.SetActive(false);
         _pausePanel.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    // HungryBoy
+    public void OpenHungryBoy()
+    {
+        _HungryBoySetup.SetActive(true);
+    }
+
+    public void CloseHungryBoy()
+    {
+        _HungryBoySetup.SetActive(false);
     }
     #endregion
 }

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRef: {fileID: 0}
   moveParentSpawnerRef: {fileID: 0}
+  currentPlayerSpeed: 0
   prefabs:
   - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
   - {fileID: 4992915563430929840, guid: 1388b57f4b883e34ea743439ad381f06, type: 3}
@@ -58,7 +59,7 @@ MonoBehaviour:
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
   - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
-  maxChildrenSpawned: 20
+  maxChildrenSpawned: 30
   spawnOriginX: 25
   xPosRange: 25
   spawnYMin: 3

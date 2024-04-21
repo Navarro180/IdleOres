@@ -6,8 +6,9 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public float moveInput;
-    public GameObject shopRef;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI oreText;
 
@@ -28,6 +29,19 @@ public class PlayerController : MonoBehaviour
     [Header("==== Horizontal Data ====")]
     public float currentHorizontalSpeed = 0.7f;
     public float minHorizontalSpeed = 0.5f;
+
+    // Awake/Singleton Setup for MoveSim Manager referencing
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {

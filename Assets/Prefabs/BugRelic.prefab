@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822386664732877034}
+  - component: {fileID: 3281258829227943491}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 4810089856635983286}
   m_Father: {fileID: 4992915563430929841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3281258829227943491
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386572644069998996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8228cdcb37c11e4fb8c700aa6e305cf, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4992915563245471184
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,11 +247,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6162, y: -2.6644, z: -1.0033}
-  m_LocalScale: {x: 0.11686798, y: 0.11686798, z: 0.11686798}
+  m_LocalScale: {x: 0.15190142, y: 0.15190142, z: 0.15190142}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3822386664732877034}
   - {fileID: 3100335638712334031}
+  - {fileID: 3822386664732877034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &5075050128736444478
@@ -280,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 5945209039351324339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 1.38, z: -6.41}
+  m_LocalPosition: {x: -0.39, y: 1.38, z: -8.72}
   m_LocalScale: {x: 5.304533, y: 5.304533, z: 5.304533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -298,8 +320,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.828798, b: 0.062745094, a: 1}
-  m_Intensity: 12.3
-  m_Range: 6.1
+  m_Intensity: 17.44
+  m_Range: 2.22
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

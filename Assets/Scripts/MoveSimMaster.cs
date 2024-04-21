@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveSimMaster : MonoBehaviour
 {
-    public PlayerController playerRef;
+    public GameObject playerRef;
     public MoveParentSpawner moveParentSpawnerRef;
 
     // Child Spawning Variables
@@ -20,7 +20,7 @@ public class MoveSimMaster : MonoBehaviour
 
     private void Awake()
     {
-        playerRef = FindAnyObjectByType<PlayerController>();
+        playerRef = PlayerController.instance.gameObject;
         moveParentSpawnerRef = FindAnyObjectByType<MoveParentSpawner>();
     }
 
@@ -40,7 +40,7 @@ public class MoveSimMaster : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float newX = transform.position.x - (playerRef.currentHorizontalSpeed * Time.deltaTime);
+        float newX = transform.position.x - (playerRef.GetComponent<PlayerController>().currentHorizontalSpeed * Time.deltaTime); // TODO FIX
         transform.position = new Vector3(newX, 0, 15);
     }
 
