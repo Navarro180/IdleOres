@@ -11,15 +11,16 @@ public class PlayerCollisions : MonoBehaviour
     {
         
     }
-
+    #region Collider
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Mine")
-        {
-            Destroy(other.gameObject);
+        //this is located on the player health
+        //if (other.tag == "Mine")
+        //{
+        //    Destroy(other.gameObject);
 
-        }
-        else if (other.tag == "BugRelic")
+        //}
+        if (other.tag == "BugRelic")
         {
             Destroy(other.gameObject);
             playerRef.currentOreValue += 25;
@@ -27,13 +28,32 @@ public class PlayerCollisions : MonoBehaviour
         else if (other.tag == "SmallRock")
         {
             Destroy(other.gameObject);
-            playerRef.currentOreValue += 2;
+            playerRef.currentOreValue += 1;
         }
         else if (other.tag == "LargeRock")
         {
             Destroy(other.gameObject);
-            playerRef.currentOreValue += 4;
+            playerRef.currentOreValue += 2;
         }
         return;
     }
+    #endregion
+
+    //#region Save/Load
+    //public void LoadData(GameData data)
+    //{
+    //    foreach (KeyValuePair<string, bool> pair in data.relicCollected)
+    //    {
+    //        if (pair.Value)
+    //        {
+    //            //relicCount++;
+    //        }
+    //    }
+    //}
+
+    //public void SaveData(ref GameData data)
+    //{
+    //    //no data needs to be saved for this script?
+    //}
+    //#endregion
 }
