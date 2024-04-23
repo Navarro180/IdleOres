@@ -15,6 +15,15 @@ TagManager:
   - coal
   - HealthPack
   - bone
+  - ore_01
+  - ore_02
+  - ore_03
+  - ore_04
+  - ore_05
+  - ore_06
+  - ore_07
+  - ore_08
+  - ore_09
   layers:
   - Default
   - TransparentFX
