@@ -11724,12 +11724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1278519073}
-  enemy: {fileID: 8300000, guid: 796b9673e7dd70649bb21772e182b550, type: 3}
+  Mine: {fileID: 8300000, guid: 796b9673e7dd70649bb21772e182b550, type: 3}
   ore: {fileID: 8300000, guid: cab6502338f2cc443872e6d088da9c9d, type: 3}
   rock: {fileID: 8300000, guid: aa3883a239fe06348b5675c8d2d11981, type: 3}
-  relicBug: {fileID: 8300000, guid: 26ec1cef13d8f8644a3f65497b64207a, type: 3}
-  relicBark: {fileID: 8300000, guid: 58401cece2f2cdf40b30d99d5d29b5ce, type: 3}
-  health: {fileID: 8300000, guid: 5a3f8ebc0e5c7504cb2097f3a340eb61, type: 3}
+  BugRelic: {fileID: 8300000, guid: 26ec1cef13d8f8644a3f65497b64207a, type: 3}
+  bone: {fileID: 8300000, guid: 58401cece2f2cdf40b30d99d5d29b5ce, type: 3}
+  Health: {fileID: 8300000, guid: 5a3f8ebc0e5c7504cb2097f3a340eb61, type: 3}
 --- !u!1 &549642096
 GameObject:
   m_ObjectHideFlags: 0
@@ -35036,7 +35036,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cdfc0731183f53d45a02d4a73ccc9f5c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ca69413e4aac2d747a339c6176c12e08, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.242
   m_Pitch: 1.12
