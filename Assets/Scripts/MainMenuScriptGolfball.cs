@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Start : MonoBehaviour
+public class MainMenuScriptGolfball : MonoBehaviour
 {
+    // ^^^^^^ I can explain... :')
+    // The latest merge refused to work without giving this script an esoteric name. I swear to f#%@ing god. 
+    // ~-= "Coding is my passion" =-~   - Ethan ;)
+
     public GameObject startPanel;
     public GameObject optionPanel;
 

@@ -25,6 +25,11 @@ public class PlayerCollisions : MonoBehaviour
             Destroy(other.gameObject);
             playerRef.currentOreValue += 25;
         }
+        else if (other.tag == "bone")
+        {
+            Destroy(other.gameObject);
+            playerRef.currentOreValue += 50;
+        }
         else if (other.tag == "SmallRock")
         {
             Destroy(other.gameObject);
@@ -38,22 +43,4 @@ public class PlayerCollisions : MonoBehaviour
         return;
     }
     #endregion
-
-    //#region Save/Load
-    //public void LoadData(GameData data)
-    //{
-    //    foreach (KeyValuePair<string, bool> pair in data.relicCollected)
-    //    {
-    //        if (pair.Value)
-    //        {
-    //            //relicCount++;
-    //        }
-    //    }
-    //}
-
-    //public void SaveData(ref GameData data)
-    //{
-    //    //no data needs to be saved for this script?
-    //}
-    //#endregion
 }

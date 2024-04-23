@@ -47,23 +47,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRef: {fileID: 0}
   moveParentSpawnerRef: {fileID: 0}
-  currentPlayerSpeed: 0
   prefabs:
-  - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
   - {fileID: 4992915563430929840, guid: 1388b57f4b883e34ea743439ad381f06, type: 3}
-  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
-  - {fileID: 7993577824029116045, guid: b32bdebd4f5b1b1408f82c43ee8ac410, type: 3}
-  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
-  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
-  - {fileID: 1459153755966407192, guid: f88058ae551363342a6e481e93891850, type: 3}
-  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
-  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
-  - {fileID: 2326603979183087799, guid: df1c836b2f6ea4848a810dd709b3145a, type: 3}
+  - {fileID: 2143188490918365442, guid: f54c9372e775f9c4d8bf22e7aaf325b1, type: 3}
+  - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
+  - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
+  - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
+  - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
   maxChildrenSpawned: 30
   spawnOriginX: 25
   xPosRange: 25
-  spawnYMin: 3
-  spawnYMax: -20
+  spawnYMin: 0
+  spawnYMax: -15
   zPos: 15
 --- !u!65 &7896396426029484108
 BoxCollider:
