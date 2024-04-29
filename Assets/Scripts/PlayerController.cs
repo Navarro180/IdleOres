@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveInput;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI moneyTextShopPanel;
     public TextMeshProUGUI oreText;
 
     [Header("==== UPGRADE MODULES ====")]
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         moneyText.text = currentMoney.ToString();
+        moneyTextShopPanel.text = currentMoney.ToString();
         oreText.text = currentOreValue.ToString();
     }
 
