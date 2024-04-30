@@ -89,11 +89,11 @@ MonoBehaviour:
   - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
   - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
   - {fileID: 5339078141211348738, guid: 24b78070a020c754bac0ecd4e53ea008, type: 3}
-  maxChildrenSpawned: 30
+  maxChildrenSpawned: 20
   spawnOriginX: 25
   xPosRange: 25
   spawnYMin: 0
-  spawnYMax: -15
+  spawnYMax: -10
   zPos: 15
 --- !u!65 &7896396426029484108
 BoxCollider:

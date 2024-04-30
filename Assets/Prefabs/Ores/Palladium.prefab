@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6472866464683280974}
   - component: {fileID: 5565832870267258519}
   m_Layer: 0
-  m_Name: Promethieum
-  m_TagString: ore_09
+  m_Name: Palladium
+  m_TagString: ore_08
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8760017255495079017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.08268565, y: -0.87592596, z: 0.27431196, w: 0.3881621}
   m_LocalPosition: {x: 525.3308, y: 307.34552, z: -509.82037}
   m_LocalScale: {x: 59.07316, y: 59.07316, z: 59.07316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.605, y: -127.079, z: 23.175}
 --- !u!33 &6472866464683280974
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a8fd37f86dbba94ebf31c952be7183f, type: 2}
+  - {fileID: 2100000, guid: 47d32f7d5563bdc499744d52b0755abd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -126,6 +126,8 @@ public class SellAndHBParticleManager : MonoBehaviour
             playerRef.currentMoney += 1;
             return;
         }
+        // Stop other sounds here
+        // Play Register Sound here
         return;
     }
 }
