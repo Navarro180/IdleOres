@@ -5,6 +5,7 @@ using UnityEngine;
 public class sound_Trigger : MonoBehaviour
 {
     public AudioSource source;
+    AudioManager _audioManager;
 
     [Header("==== Auio Files ====")]
     public AudioClip Mine;
@@ -16,6 +17,12 @@ public class sound_Trigger : MonoBehaviour
 
     //public LayerMask ores;
 
+
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,11 +41,11 @@ public class sound_Trigger : MonoBehaviour
             source.PlayOneShot(bone);
         }
 
-        if (collision.gameObject.tag == "Large")
+        if (collision.gameObject.tag == "LargeRock")
         {
             source.PlayOneShot(rock);
         }
-        if (collision.gameObject.tag == "Small")
+        if (collision.gameObject.tag == "SmallRock")
         {
             source.PlayOneShot(rock);
         }
@@ -88,9 +95,10 @@ public class sound_Trigger : MonoBehaviour
             source.PlayOneShot(ore);
         }
 
-        if (collision.gameObject.tag == "Health")
+        if (collision.gameObject.tag == "HealthPack")
         {
             source.PlayOneShot(Health);
         }
+
     }
 }

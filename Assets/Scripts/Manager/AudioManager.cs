@@ -14,13 +14,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-       // _musicSource.clip = _bg;
+        //_musicSource.clip = _bg;
        // _musicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)
     {
-       // _sfxSource.PlayOneShot(clip);
+        _sfxSource.PlayOneShot(clip);
     }
 
     #region Notes
