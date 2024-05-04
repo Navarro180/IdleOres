@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveInput;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI moneyTextShopPanel;
     public TextMeshProUGUI oreText;
 
     [Header("==== UPGRADE MODULES ====")]
@@ -18,8 +19,8 @@ public class PlayerController : MonoBehaviour
     public float upgradeMaxHorizontalSpeed = 3.0f;
 
     [Header("==== SCORE VALUES ====")]
-    public float currentOreValue;
-    public float currentMoney;
+    public long currentOreValue;
+    public long currentMoney;
 
     [Header("==== Vertical Data ====")]
     public float currentAngle = 0f;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         moneyText.text = currentMoney.ToString();
+        moneyTextShopPanel.text = currentMoney.ToString();
         oreText.text = currentOreValue.ToString();
     }
 

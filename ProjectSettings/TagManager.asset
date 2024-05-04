@@ -4,21 +4,26 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - DespawnZone
+  - MoveSimSpawnTrigger
+  - MoveSimMaster
   - BugRelic
   - Mine
   - SmallRock
   - LargeRock
-  - enemy
-  - boost_Drill
-  - Health Pack
-  - boundary
-  - tile
-  - coal
   - oil_Spill
-  - $
-  - DespawnZone
-  - MoveSimMaster
-  - MoveSimSpawnTrigger
+  - coal
+  - HealthPack
+  - bone
+  - ore_01
+  - ore_02
+  - ore_03
+  - ore_04
+  - ore_05
+  - ore_06
+  - ore_07
+  - ore_08
+  - ore_09
   layers:
   - Default
   - TransparentFX
@@ -26,11 +31,11 @@ TagManager:
   - 
   - Water
   - UI
+  - GlobalVolume
   - 
   - 
   - 
   - 
-  - HungryBoy
   - 
   - 
   - 

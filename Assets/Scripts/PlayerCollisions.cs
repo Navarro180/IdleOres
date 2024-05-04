@@ -11,29 +11,36 @@ public class PlayerCollisions : MonoBehaviour
     {
         
     }
-
+    #region Collider
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Mine")
-        {
-            Destroy(other.gameObject);
+        //this is located on the player health
+        //if (other.tag == "Mine")
+        //{
+        //    Destroy(other.gameObject);
 
-        }
-        else if (other.tag == "BugRelic")
+        //}
+        if (other.tag == "BugRelic")
         {
             Destroy(other.gameObject);
             playerRef.currentOreValue += 25;
         }
+        else if (other.tag == "bone")
+        {
+            Destroy(other.gameObject);
+            playerRef.currentOreValue += 50;
+        }
         else if (other.tag == "SmallRock")
         {
             Destroy(other.gameObject);
-            playerRef.currentOreValue += 2;
+            playerRef.currentOreValue += 1;
         }
         else if (other.tag == "LargeRock")
         {
             Destroy(other.gameObject);
-            playerRef.currentOreValue += 4;
+            playerRef.currentOreValue += 2;
         }
         return;
     }
+    #endregion
 }
