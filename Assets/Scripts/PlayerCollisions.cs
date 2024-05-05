@@ -7,19 +7,9 @@ public class PlayerCollisions : MonoBehaviour
 {
     public PlayerController playerRef;
 
-    private void Start()
-    {
-        
-    }
     #region Collider
     private void OnTriggerEnter(Collider other)
     {
-        //this is located on the player health
-        //if (other.tag == "Mine")
-        //{
-        //    Destroy(other.gameObject);
-
-        //}
         if (other.tag == "BugRelic")
         {
             Destroy(other.gameObject);

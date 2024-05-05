@@ -48,10 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Boost();
-    }
 
-    public void FixedUpdate()
-    {
         moneyText.text = currentMoney.ToString();
         moneyTextShopPanel.text = currentMoney.ToString();
         oreText.text = currentOreValue.ToString();
