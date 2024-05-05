@@ -29,7 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (other.tag == "HealthPack")
         {
-            PlayerHeal(10);
+            PlayerHeal(100);             
             Debug.Log(GameManager.gameManager._playerHealth.Health);
             Destroy(other.gameObject);
             gameScreenArmorHealthText.text = gameManager._playerHealth.Health.ToString();

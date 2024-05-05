@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UnitHealth
+public class UnitHealth : MonoBehaviour
 {
     public TextMeshProUGUI gameScreenArmorHealthText;
     public GameManager gameManager;
 
     //Fields
-    int health;
+    public int health;
     public int maxHealth;
 
     //Properties

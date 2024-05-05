@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5388768817068938975}
   - component: {fileID: 6472866464683280974}
   - component: {fileID: 5565832870267258519}
+  - component: {fileID: -128225798640516709}
   m_Layer: 0
-  m_Name: Promethieum
-  m_TagString: ore_09
+  m_Name: Palladium
+  m_TagString: ore_08
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8760017255495079017}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.033991516, y: -0.93277216, z: 0.091363564, w: 0.34703535}
+  m_LocalRotation: {x: -0.08268565, y: -0.87592596, z: 0.27431196, w: 0.3881621}
   m_LocalPosition: {x: 525.3308, y: 307.34552, z: -509.82037}
   m_LocalScale: {x: 59.07316, y: 59.07316, z: 59.07316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 8.444, y: -138.64, z: 7.366}
+  m_LocalEulerAnglesHint: {x: 24.605, y: -127.079, z: 23.175}
 --- !u!33 &6472866464683280974
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a8fd37f86dbba94ebf31c952be7183f, type: 2}
+  - {fileID: 2100000, guid: 47d32f7d5563bdc499744d52b0755abd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-128225798640516709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760017255495079017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019352898, y: 0.018232245, z: 0.020651896}
+  m_Center: {x: 2.579922e-10, y: 0.008656782, z: 0.0000004773531}
