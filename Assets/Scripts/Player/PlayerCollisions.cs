@@ -24,11 +24,6 @@ public class PlayerCollisions : MonoBehaviour
         }
         else if (other.tag == "bone")
         {
-            Destroy(other.gameObject);
-            playerRef.currentOreValue += 100;
-        }
-        else if (other.tag == "bone")
-        {
             _audioManager.PlaySFX(_audioManager.bone);
             Destroy(other.gameObject);
             playerRef.currentOreValue += 50;
