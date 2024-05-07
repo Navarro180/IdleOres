@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public GameObject _creditsPanel;
     public GameObject _optionPanel;
 
+
     #region ChangeScene
     public void ChangeScene(int sceneID)
     {
@@ -25,19 +26,18 @@ public class MenuManager : MonoBehaviour
     public void CloseOptionPanel()
     {
         _optionPanel.SetActive(false);
-    } 
+    }
 
-    public void OpenCreditPanel()
+    public void OpenCreditsPanel()
     {
         _creditsPanel.SetActive(true);
     }
-    
-    public void CloseCreditPanel()
+
+    public void CloseCreditsPanel()
     {
         _creditsPanel.SetActive(false);
     }
     #endregion
-    
     #region Quit Function
     public void Quit()
     {

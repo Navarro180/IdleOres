@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 public class TouchManager :MonoBehaviour
 {
     private PlayerInput _playerInput;
+    //public MainMenuTransition mainMenuTransition;
+    public GameObject starterScene;
 
-    [SerializeField]
-    private GameObject _menuPanel;
 
     private InputAction _touchPressAction;
     //private InputAction _touchPositionAction;
@@ -38,6 +38,7 @@ public class TouchManager :MonoBehaviour
     {
         float value = ctx.ReadValue<float>();
         Debug.Log(value);
-        _menuPanel.SetActive(true);
+        starterScene.SetActive(true);
+        //mainMenuTransition.OnStartMenuTouch();
     }
 }
