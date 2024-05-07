@@ -23,22 +23,26 @@ public class IdleManager : MonoBehaviour
     // Time Variables
     public DateTime dateTimeNow;
 
-    // Update is called once per frame
-    private void Update()
+    private void Start()
     {
-        GetOreAverage();
-        
-        localMaxOreLevel = shopManagerRef.GetComponent<ShopManagerGolfball>().oreSpawnIndexMaximum;
+        OreGainedSinceLastCheck();
+    }
+
+    public void OreGainedSinceLastCheck()
+    {
         localOreValue = playerRef.GetComponent<PlayerController>().currentOreValue;
+        localMaxOreLevel = shopManagerRef.GetComponent<ShopManagerGolfball>().oreSpawnIndexMaximum;
+        IdleOreGained();
     }
 
     public float GetOreAverage()
     {
-        
+        long tempOreValue = 0;
         for (int i = 0; i < localMaxOreLevel; i++)
         {
-
+            tempOreValue += oreValues[i];
         }
+        oreAvg = tempOreValue / localMaxOreLevel;
         return oreAvg;
     }
 
@@ -47,25 +51,14 @@ public class IdleManager : MonoBehaviour
     /// </summary>
     private void IdleOreGained()
     {
-        // storedOreValue += (TimeSinceLastUpdate() * storedTopSpeedValue * AverageValueOfUnlockedOres())
+        playerRef.GetComponent<PlayerController>().currentOreValue += (long)(TimeSinceLastUpdate() * playerRef.GetComponent<PlayerController>().upgradeMaxHorizontalSpeed * GetOreAverage());
     }
-
-    private long AverageValueOfUnlockedOres()
-    {
-        long tempOreValue = 0;
-        for (int i = 0; i <= localMaxOreLevel; i++)
-        {
-            tempOreValue += oreValues[i];
-        }
-        return tempOreValue / localMaxOreLevel;
-    }
-
 
 
     /// <summary>
     /// THIS IS AN EXAMPLE OF WHAT NEEDS TO BE SAVED IN THE SAVE SYSTEM
     /// </summary>
-    private void UpdateTime()
+    public void UpdateTime()
     {
         dateTimeNow = DateTime.Now; // Store the current time. 
     }
