@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class MainMenuTransition : MonoBehaviour
 {
@@ -26,6 +26,6 @@ public class MainMenuTransition : MonoBehaviour
         //animator.Play("StartMenuTransitionAnim");
         //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
     }
 }
