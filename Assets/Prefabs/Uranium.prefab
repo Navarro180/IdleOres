@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5388768817068938975}
   - component: {fileID: 6472866464683280974}
   - component: {fileID: 5565832870267258519}
+  - component: {fileID: -5794327171126619790}
   m_Layer: 0
-  m_Name: Iron
-  m_TagString: ore_03
+  m_Name: Uranium
+  m_TagString: ore_07
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8760017255495079017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.15451169, y: 0.16576895, z: -0.022218527, w: 0.9737316}
   m_LocalPosition: {x: 525.3308, y: 307.34552, z: -509.82037}
   m_LocalScale: {x: 59.07316, y: 59.07316, z: 59.07316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -17.07, y: 20.175, z: -5.673}
 --- !u!33 &6472866464683280974
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6898917eb799b8242b7f811d8c6803fc, type: 2}
+  - {fileID: 2100000, guid: e2e531fb582b0404092f40b6ed95a2c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-5794327171126619790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760017255495079017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01935289, y: 0.018232247, z: 0.020651888}
+  m_Center: {x: -1.289961e-10, y: 0.008656783, z: 0.00000023867656}

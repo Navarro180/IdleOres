@@ -7,11 +7,16 @@ public class MoveSimMaster : MonoBehaviour
 {
     public GameObject playerRef;
     public MoveParentSpawner moveParentSpawnerRef;
+    public ShopManagerGolfball shopManagerRef;
 
     // Child Spawning Variables
     public GameObject[] prefabs;
     public int maxChildrenSpawned = 3;
 
+    // ADD NEW ORE BUTTON VARIABLES
+    public int localOreSpawnIndexMaximum;
+
+    // SPAWN REGION VARIABLES
     public float spawnOriginX = 25f;
     public float xPosRange = 25f;
     public float spawnYMin = 5f;
@@ -22,6 +27,8 @@ public class MoveSimMaster : MonoBehaviour
     {
         playerRef = PlayerController.instance.gameObject;
         moveParentSpawnerRef = FindAnyObjectByType<MoveParentSpawner>();
+        shopManagerRef = FindAnyObjectByType<ShopManagerGolfball>();
+        localOreSpawnIndexMaximum = shopManagerRef.GetComponent<ShopManagerGolfball>().oreSpawnIndexMaximum;
     }
 
     // Start is called before the first frame update
@@ -30,7 +37,7 @@ public class MoveSimMaster : MonoBehaviour
         // Spawn Logic
         for (int i = 0; i < maxChildrenSpawned; i++)
         {
-            GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length - 1)];
+            GameObject randomPrefab = prefabs[Random.Range(0, localOreSpawnIndexMaximum)];
             float randomY = Random.Range(spawnYMin, spawnYMax);
             float randomX = Random.Range(spawnOriginX - xPosRange, spawnOriginX + xPosRange);
             Instantiate(randomPrefab, new Vector3(randomX, randomY, zPos), randomPrefab.transform.rotation, this.transform);

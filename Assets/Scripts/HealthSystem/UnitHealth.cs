@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class UnitHealth 
+public class UnitHealth : MonoBehaviour
 {
+    public TextMeshProUGUI gameScreenArmorHealthText;
+    public GameManager gameManager;
+
     //Fields
-    int health;
-    int maxHealth;
+    public int health;
+    public int maxHealth;
 
     //Properties
     public int Health { get { return health; } set { health = value; } }
@@ -37,6 +41,7 @@ public class UnitHealth
         if (health > maxHealth)
         {
             health = maxHealth;
+
         }
     }
 }
