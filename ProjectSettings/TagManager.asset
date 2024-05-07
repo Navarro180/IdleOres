@@ -24,6 +24,7 @@ TagManager:
   - ore_07
   - ore_08
   - ore_09
+  - Audio
   layers:
   - Default
   - TransparentFX
