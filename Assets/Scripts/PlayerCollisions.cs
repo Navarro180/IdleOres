@@ -73,7 +73,7 @@ public class PlayerCollisions : MonoBehaviour
         else if (other.tag == "ore_09")
         {
             Destroy(other.gameObject);
-            playerRef.currentOreValue += 8000;
+            playerRef.currentOreValue += 800;
         }
         return;
     }
