@@ -5,16 +5,26 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] HealthBar healthBar;
+
+    AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Mine")
         {
+            _audioManager.PlaySFX(_audioManager.Mine);
             PlayerTakeDmg(10);
             Debug.Log(GameManager.gameManager._playerHealth.Health);
             Destroy(other.gameObject);
         }
         if (other.tag == "HealthPack")
         {
+            _audioManager.PlaySFX(_audioManager.Health);
             PlayerHeal(10);
             Debug.Log(GameManager.gameManager._playerHealth.Health);
             Destroy(other.gameObject);

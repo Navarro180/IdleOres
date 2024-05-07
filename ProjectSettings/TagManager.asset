@@ -14,11 +14,13 @@ TagManager:
   - oil_Spill
   - coal
   - HealthPack
+  - bone
+  - Audio
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - UICamera
   - Water
   - UI
   - 

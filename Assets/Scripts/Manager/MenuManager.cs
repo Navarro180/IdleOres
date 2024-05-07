@@ -6,15 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject _levelPanel;
+    public GameObject _creditsPanel;
     public GameObject _optionPanel;
 
-    #region Pause/Unpause
-
-    #endregion
 
     #region ChangeScene
-    public void ReturnMainMenu(int sceneID)
+    public void ChangeScene(int sceneID)
     {
             SceneManager.LoadScene(sceneID);
     }
@@ -29,11 +26,16 @@ public class MenuManager : MonoBehaviour
     public void CloseOptionPanel()
     {
         _optionPanel.SetActive(false);
-    } 
-    
-    public void ClosePanel()
+    }
+
+    public void OpenCreditsPanel()
     {
-        _levelPanel.SetActive(false);
+        _creditsPanel.SetActive(true);
+    }
+
+    public void CloseCreditsPanel()
+    {
+        _creditsPanel.SetActive(false);
     }
     #endregion
     #region Quit Function
