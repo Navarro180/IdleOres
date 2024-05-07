@@ -16,7 +16,7 @@ public class RepairEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int tempHealth = gameManagerRef.GetComponent<GameManager>().currentHealth;
+        int tempHealth = gameManagerRef.GetComponent<GameManager>().currentHealth;      // TODO: This isn't reading correctly for some reason. Good luck!
         if (tempHealth <= 25)
         {
             repairOverlay.SetActive(true);
