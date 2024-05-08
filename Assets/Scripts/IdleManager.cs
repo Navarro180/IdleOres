@@ -51,7 +51,7 @@ public class IdleManager : MonoBehaviour
     /// </summary>
     private void IdleOreGained()
     {
-        playerRef.GetComponent<PlayerController>().currentOreValue += (long)(TimeSinceLastUpdate() * playerRef.GetComponent<PlayerController>().upgradeMaxHorizontalSpeed * GetOreAverage());
+        playerRef.GetComponent<PlayerController>().currentOreValue += (long)(TimeSinceLastUpdate() * (long)playerRef.GetComponent<PlayerController>().upgradeMaxHorizontalSpeed * (long)GetOreAverage());
     }
 
 
