@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UnscaledTimeParticle : MonoBehaviour
 {
-    
-    public SellAndHBParticleManager manager;
+    //for somw reason is not calculating the class
+    //public SellAndHBParticleManager manager;
 
     // Update is called once per frame
     void Update()
