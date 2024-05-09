@@ -51,9 +51,9 @@ public class IdleManager : MonoBehaviour
     /// </summary>
     private void IdleOreGained()
     {
-        playerRef.GetComponent<PlayerController>().currentOreValue += (long)(TimeSinceLastUpdate() * (long)playerRef.GetComponent<PlayerController>().upgradeMaxHorizontalSpeed * (long)GetOreAverage());
+        //playerRef.GetComponent<PlayerController>().currentOreValue += (long)(TimeSinceLastUpdate() * (long)playerRef.GetComponent<PlayerController>().upgradeMaxHorizontalSpeed * (long)GetOreAverage());
     }
-
+     
 
     /// <summary>
     /// THIS IS AN EXAMPLE OF WHAT NEEDS TO BE SAVED IN THE SAVE SYSTEM

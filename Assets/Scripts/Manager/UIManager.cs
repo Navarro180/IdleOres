@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -33,6 +34,12 @@ public class UIManager : MonoBehaviour
     public GameObject _HungryBoySetup;
     public GameObject mainRenderImage; 
     public GameObject mainUI;
+
+    public void SaveGame()
+    {
+        //save the game annytime before any loading a new scene or anything
+        DataPersistanceManager.instance.SaveGame();
+    }
 
     #region ChangeScene
     public void ReturnMainMenu(int sceneID)

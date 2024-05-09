@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager {  get; private set; }
 
-    public int currentHealth;
-    public int maxHealth;
+    public int currentHealth = 100;
+    public int maxHealth = 100;
 
     public UnitHealth _playerHealth;
 

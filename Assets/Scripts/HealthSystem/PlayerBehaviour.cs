@@ -7,9 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public TextMeshProUGUI gameScreenArmorHealthText;
     public GameManager gameManager;
-    public AudioManager _audioManager;
+    AudioManager _audioManager;
 
-    public ShopManagerGolfball shopManager;
+    //public ShopManagerGolfball shopManager;
 
     [SerializeField] HealthBar healthBar;
 
@@ -29,8 +29,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.tag == "Mine")
         {
             _audioManager.PlaySFX(_audioManager.Mine);
-            PlayerTakeDmg(10);
-            Debug.Log(GameManager.gameManager._playerHealth.Health);
+            PlayerTakeDmg(15);
+            //Debug.Log(GameManager.gameManager._playerHealth.Health);
             int localCurrentHealth = GameManager.gameManager._playerHealth.Health;
             Destroy(other.gameObject);
             gameScreenArmorHealthText.text = localCurrentHealth.ToString();
@@ -38,8 +38,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.tag == "HealthPack")
         {
             _audioManager.PlaySFX(_audioManager.Health);
-            PlayerHeal(100);             
-            Debug.Log(GameManager.gameManager._playerHealth.Health);
+            PlayerHeal(20);             
+            //Debug.Log(GameManager.gameManager._playerHealth.Health);
             Destroy(other.gameObject);
             gameScreenArmorHealthText.text = gameManager._playerHealth.Health.ToString();
         }
@@ -51,7 +51,7 @@ public class PlayerBehaviour : MonoBehaviour
         healthBar.SetHealth(GameManager.gameManager._playerHealth.Health);
     }
 
-    private void PlayerHeal(int healing)
+    public void PlayerHeal(int healing)
     {
         GameManager.gameManager._playerHealth.HealUnit(healing);
         healthBar.SetHealth(GameManager.gameManager._playerHealth.Health);

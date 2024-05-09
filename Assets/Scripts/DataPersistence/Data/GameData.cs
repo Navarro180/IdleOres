@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameData 
 {
     //track the player actions
+    public long lastUpdated;
     public int playerHealth;
     public int moneyText;
     public int valueText;
@@ -20,7 +21,7 @@ public class GameData
 
     public GameData()
     {
-        this.playerHealth = 100;
+        this.playerHealth = 0;
         this.moneyText = 0;
         this.valueText = 0;
         

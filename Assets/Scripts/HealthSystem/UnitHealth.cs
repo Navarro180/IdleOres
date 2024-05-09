@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UnitHealth : MonoBehaviour
+public class UnitHealth
 {
-    public TextMeshProUGUI gameScreenArmorHealthText;
-    public GameManager gameManager;
+    //you can change any health method in this class
+
+    //public TextMeshProUGUI gameScreenArmorHealthText;
+    //GameManager gameManager;
 
     //Fields
-    public int health;
-    public int maxHealth;
+    int health;
+    int maxHealth;
 
     //Properties
     public int Health { get { return health; } set { health = value; } }
@@ -44,4 +46,14 @@ public class UnitHealth : MonoBehaviour
 
         }
     }
+
+    //public void LoadData(GameData data)
+    //{
+    //    this.health = data.playerHealth;
+    //}
+
+    //public void SaveData(ref GameData data)
+    //{
+    //    data.playerHealth = this.health;
+    //}
 }

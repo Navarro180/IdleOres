@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistance
 {
     public static PlayerController instance;
 
@@ -42,6 +42,18 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.currentOreValue = data.valueText;
+        this.currentMoney = data.moneyText;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.valueText = (int)this.currentOreValue;
+        data.moneyText = (int)this.currentMoney;
     }
 
     private void Update()
@@ -82,12 +94,12 @@ public class PlayerController : MonoBehaviour
         Vector3 currentPosition = transform.position;
         currentPosition.y += upgradeMaxVerticalSpeed * moveInput * Time.deltaTime;
         currentPosition.y = Mathf.Min(topBarrier, currentPosition.y);
-        
+
         if (currentPosition.y <= bottomBarrier)
         {
             return;
         }
-        
+
         transform.position = currentPosition;
     }
 
@@ -108,4 +120,5 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 }
