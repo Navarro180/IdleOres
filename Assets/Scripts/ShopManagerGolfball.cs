@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class ShopManagerGolfball : MonoBehaviour
@@ -98,12 +97,6 @@ public class ShopManagerGolfball : MonoBehaviour
 
     // TempValues
     public int currentRockCount;
-
-
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {

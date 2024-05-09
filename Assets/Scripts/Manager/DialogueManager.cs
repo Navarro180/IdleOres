@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 
 
 public class DialogueManager : MonoBehaviour
